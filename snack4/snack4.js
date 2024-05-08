@@ -1,36 +1,30 @@
 'use strict';
 
-// CREDO DUE ARRAY CON ELEMENTI DIVERSI
+// CREO DUE ARRAY CON ELEMENTI DIVERSI
 
-const UNO = ["ariete", "toro", "gemelli", "cancro"];
-console.log(UNO);
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [10, 20, 30];
 
-const DUE = [
-    "leone", "vergine", "bilancia", "scorpione", "sagittario"];
-console.log(DUE);
+console.log("Array 1: ", array1);
+console.log("Array 2: ", array2);
 
 /*  Aggiungi elementi casuali all’array che ha meno elementi,
 fino a quando ne avrà tanti quanti l’altro. */
 
-// CICLO FOR
+// CICLO WHILE + PUSH ELEMENTO RANDOM
 
-for (let i = UNO.lenght; i < DUE.lenght; i++)
-
-    // INSERISCO ELEMENTO RANDOM PER EQUIPARARE GLI ARRAY
-
-    {
-        
-        const randomElement = DUE[Math.floor(Math.random() 
-                                            * DUE.length)];
-
-        UNO.push(randomElement);
-    
-        // 
-    
+while (array1.length !== array2.length) {
+    if (array1.length < array2.length) {
+        // Aggiungo un elemento casuale all'array1
+        array1.push(Math.floor(Math.random() * 100));
+    } else {
+        // Aggiungo un elemento casuale all'array2
+        array2.push(Math.floor(Math.random() * 100));
     }
+}
 
-console.log("Array 1: ", UNO);
-console.log("Array 2: ", DUE);
+console.log("Array 1: ", array1);
+console.log("Array 2: ", array2);
 
 
- 
+
